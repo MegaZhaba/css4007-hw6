@@ -1,0 +1,112 @@
+=== Rendered episode: slippery=False, fixed policy, seed 11000 -> goal in 6 steps (agent shown as [x]) ===
+
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+  (Down)
+SFFF
+[F]HFH
+FFFH
+HFFG
+
+  (Down)
+SFFF
+FHFH
+[F]FFH
+HFFG
+
+  (Right)
+SFFF
+FHFH
+F[F]FH
+HFFG
+
+  (Down)
+SFFF
+FHFH
+FFFH
+H[F]FG
+
+  (Right)
+SFFF
+FHFH
+FFFH
+HF[F]G
+
+  (Right)
+SFFF
+FHFH
+FFFH
+HFF[G]
+
+=== Rendered episode: slippery=True, fixed policy, seed 11000 -> hole in 8 steps (agent shown as [x]) ===
+
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+  (Down)
+S[F]FF
+FHFH
+FFFH
+HFFG
+
+  (Left)
+S[F]FF
+FHFH
+FFFH
+HFFG
+
+  (Left)
+S[F]FF
+FHFH
+FFFH
+HFFG
+
+  (Left)
+S[F]FF
+FHFH
+FFFH
+HFFG
+
+  (Left)
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+  (Down)
+SFFF
+[F]HFH
+FFFH
+HFFG
+
+  (Down)
+SFFF
+[F]HFH
+FFFH
+HFFG
+
+  (Down)
+SFFF
+F[H]FH
+FFFH
+HFFG
+
+
+=== Example traces (state -action-> next state) ===
+[slippery=False/fixed] goal (seed 11000, 6 steps): 0 -Down-> 4 -Down-> 8 -Right-> 9 -Down-> 13 -Right-> 14 -Right-> 15
+[slippery=False/fixed] hole: never observed in 150 episodes
+[slippery=False/fixed] time_limit: never observed in 150 episodes
+[slippery=False/random] goal (seed 33006, 7 steps): 0 -Left-> 0 -Down-> 4 -Down-> 8 -Right-> 9 -Down-> 13 -Right-> 14 -Right-> 15
+[slippery=False/random] hole (seed 11000, 3 steps): 0 -Up-> 0 -Right-> 1 -Down-> 5
+[slippery=False/random] time_limit: never observed in 150 episodes
+[slippery=True/fixed] goal (seed 11020, 14 steps): 0 -Down-> 4 -Down-> 4 -Down-> 8 -Right-> 9 -Down-> 13 -Right-> 13 -Right-> 9 -Down-> 10 -Down-> 9 -Down-> 10 -Down-> 14 -Right-> 10 -Down-> 14 -Right-> 15
+[slippery=True/fixed] hole (seed 11000, 8 steps): 0 -Down-> 1 -Left-> 1 -Left-> 1 -Left-> 1 -Left-> 0 -Down-> 4 -Down-> 4 -Down-> 5
+[slippery=True/fixed] time_limit: never observed in 150 episodes
+[slippery=True/random] goal (seed 22015, 8 steps): 0 -Up-> 1 -Up-> 2 -Down-> 6 -Left-> 10 -Down-> 14 -Left-> 13 -Right-> 14 -Right-> 15
+[slippery=True/random] hole (seed 11000, 4 steps): 0 -Up-> 0 -Right-> 4 -Down-> 4 -Up-> 5
+[slippery=True/random] time_limit: never observed in 150 episodes

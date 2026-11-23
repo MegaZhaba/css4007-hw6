@@ -1,0 +1,28 @@
+[PASS] Boundary: (1,1) up stays at (1,1), reward -1  — [(1.0, (1, 1), -1, False)]
+[PASS] Boundary: (3,1) left stays at (3,1)  — [(1.0, (3, 1), -1, False)]
+[PASS] Wall: (2,1) right bumps into # and stays  — [(1.0, (2, 1), -1, False)]
+[PASS] Wall in mud: (1,2) down stays in M and costs -3  — [(1.0, (1, 2), -3, False)]
+[PASS] Wall is not a state  — (2,2) 0-based=(1,1)
+[PASS] Ice left: 0.8 bump into wall (stay) + 0.1 up + 0.1 down  — [(0.8, (2, 3), -1, False), (0.1, (1, 3), -1, False), (0.1, (3, 3), -1, False)]
+[PASS] Ice up: each slip resolved separately (left slip hits wall, right slip -> hole)  — [(0.8, (1, 3), -1, False), (0.1, (2, 3), -1, False), (0.1, (2, 4), -10, True)]
+[PASS] paper: all P(s'|s,a) sum to 1  — min=1.0, max=1.0
+[PASS] extended: all P(s'|s,a) sum to 1  — min=1.0, max=1.0
+[PASS] Ice up: probabilities sum to 1  — [(0.8, (1, 3), -1, False), (0.1, (2, 3), -1, False), (0.1, (2, 4), -10, True)]
+[PASS] Ice right: probabilities sum to 1  — [(0.8, (2, 4), -10, True), (0.1, (1, 3), -1, False), (0.1, (3, 3), -1, False)]
+[PASS] Ice down: probabilities sum to 1  — [(0.8, (3, 3), -1, False), (0.1, (2, 3), -1, False), (0.1, (2, 4), -10, True)]
+[PASS] Ice left: probabilities sum to 1  — [(0.8, (2, 3), -1, False), (0.1, (1, 3), -1, False), (0.1, (3, 3), -1, False)]
+[PASS] Deterministic tiles give a single outcome with p=1
+[PASS] Entering mud M costs -3: (1,1) right
+[PASS] Entering sand D costs -2: extended (3,1) right  — [(1.0, (3, 2), -2, False)]
+[PASS] Entering water W costs -5: extended (3,3) right  — [(1.0, (3, 4), -5, False)]
+[PASS] Bumping inside water costs -5 again: extended (3,4) down  — [(1.0, (3, 4), -5, False)]
+[PASS] Sand and water are deterministic
+[PASS] Entering G gives exactly +10 (no extra floor cost)  — [(1.0, (1, 4), 10, True)]
+[PASS] Entering H gives -10
+[PASS] Terminal states have no actions/transitions
+[PASS] V(G) = V(H) = 0 after convergence
+[PASS] Simulator stops at goal; last reward +10, nothing after  — steps=5, rewards=[-1, -1, -3, -1, 10]
+[PASS] Simulator stops at hole; last reward -10  — rewards=[-1, -1, -1, -10]
+[PASS] Unknown tile letter is rejected  — no floor rule for tiles {'X'}
+
+26/26 checks passed
