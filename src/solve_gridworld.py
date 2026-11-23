@@ -84,7 +84,7 @@ def solve_map(name, rows, cfg, rules, log):
     for outcome, (seed, res) in example.items():
         path = " -> ".join(f"{one_based(s)}{ARROWS[a]}" for s, a, _, _ in res["trace"])
         log(f"Example {outcome} episode (seed {seed}): {path} -> {one_based(res['trace'][-1][2])}")
-    for missing in {"goal", "hole", "time_limit"} - example.keys():
+    for missing in sorted({"goal", "hole", "time_limit"} - example.keys()):
         log(f"Outcome '{missing}' never occurred in 150 episodes.")
 
     with open(OUT / f"partC_episodes_{name}.csv", "w", newline="") as f:
